@@ -1,0 +1,33 @@
+name: challenge
+
+on: push
+
+jobs:
+    job1:
+        name: ubuntu
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: date 
+    job2:
+        name: windows
+        runs-on: windows-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+               run: $get-date()
+    job3:
+        name: macos
+        runs-on: macos-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+               run: $get-date()
+    job4: 
+        name: job4
+        uses: ubuntu-latest
+           depends-on: job1, job2, job3
