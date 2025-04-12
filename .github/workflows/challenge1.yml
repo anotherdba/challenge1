@@ -18,7 +18,7 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-               run: get-date
+               run: date
     job3:
         name: macos
         runs-on: macos-latest
