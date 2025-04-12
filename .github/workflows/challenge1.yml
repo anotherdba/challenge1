@@ -10,7 +10,7 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-              run: date 
+            - run: date 
     job2:
         name: windows
         runs-on: windows-latest
@@ -18,7 +18,7 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-               run: date
+            - run: date
     job3:
         name: windows
         runs-on: windows-latest
@@ -26,7 +26,7 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-               run: date
+            - run: date
     job4:
         needs:[job1,job2,job3]
         name: windows
@@ -35,4 +35,4 @@ jobs:
             - name: Step one
               uses: actions/checkout@v2
             - name: Step two
-               run: date
+            - run: date
